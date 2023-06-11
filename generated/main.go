@@ -26,10 +26,10 @@ var confirmationDelay = time.Duration(5) * time.Second
 var wm = wallet_manager.NewWalletManagerWithOpts(ctx, client, commitment, confirmationCommitment, confirmationTimeout, confirmationDelay, false)
 
 func main() {
-	test_mint()
+	test_spl_mint()
 }
 
-func test_mint() {
+func test_spl_mint() {
 	to := solana.MustPublicKeyFromBase58("9B5XszUGdMaxCZ7uSQhPzdks5ZQSmWxrmzCSvtJ6Ns6b")
 	fmt.Println(to)
 	from := solana.NewWallet()
